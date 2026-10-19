@@ -22,7 +22,22 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.10
+## Changes in 0.99.11
+
+- Adds an embedded loader to the standalone NSP for launching installed
+  RetroArch cores. Reborn stays inside the NSP; an SD copy of Reborn is not
+  needed to open it from HOME. Cores and ROMs are not bundled.
+- Returning from a core reloads Reborn. Exiting Reborn returns to HOME.
+  Missing, incomplete or invalid core files return to Reborn with an error.
+- Keeps the NSP updater and packaged UI resources active when Reborn is
+  running through its embedded loader. The separate NRO keeps its normal
+  homebrew-menu behavior.
+
+The new HOME launch path and RetroArch core launch/return have passed host
+boundary tests and native compilation, but still require a physical Switch
+test. The prior 0.99.10 release remains available under Releases.
+
+Also includes the 0.99.10 updater changes:
 
 - Checks for updates in the background at launch and announces a newer release.
   Choose A to update, or B to continue using Reborn. Offline checks stay quiet.
@@ -61,7 +76,7 @@ Updates are downloaded only after you choose Download.
 - Failed downloads or verification do not install anything. The verified NSP
   remains available under **Options > Install downloaded app update** for retry.
 
-**Upgrading from 0.99.8 or 0.99.9:** install 0.99.10 once, because the old HOME
+**Upgrading from 0.99.8 or 0.99.9:** install 0.99.10 or newer once, because the old HOME
 updater only downloads its NSP. You can use Reborn's NRO through the homebrew
 menu or another homebrew installer. Subsequent releases use the new automatic
 apply flow after you accept the update.
@@ -70,8 +85,8 @@ The first standalone NSP release is **0.99.8**. Its package structure, metadata
 digest, executable, resource hashes and updater have been checked on PC.
 The author has confirmed that 0.99.8 opens from HOME on an OLED Switch.
 The 0.99.10 HOME self-update/restart still needs console testing.
-RetroArch core launch currently requires the NRO version opened through the
-homebrew menu; core handoff is not yet supported by the standalone NSP.
+The standalone RetroArch loader added in 0.99.11 still requires console
+verification; the NRO version continues to use the homebrew menu's loader.
 This is a development release, not a claim of complete Tinfoil or firmware parity.
 
 ## License and source requests
