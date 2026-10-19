@@ -22,6 +22,18 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.9
+
+- USB starts before theme and network initialization. Windows capacity queries
+  no longer scan the Firmware export before displaying the device.
+- Selecting Hekate on OLED or Mariko offers a reboot into the Hekate menu.
+  Other payloads can then be selected in Hekate.
+- Idle MTP disconnects automatically before reboot; an active file transfer
+  must finish first. USB is restored if the reboot request fails.
+
+The changes compile for Switch and pass PC regression checks. Discovery speed
+and the OLED Hekate reboot still need confirmation on a physical console.
+
 ## App updates
 
 Choose **Options > Check for app updates**. New releases are fetched from this
