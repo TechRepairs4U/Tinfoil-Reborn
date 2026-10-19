@@ -37,7 +37,10 @@ Updates are downloaded only after you choose Download.
 
 The first standalone NSP release is **0.99.8**. Its package structure, metadata
 digest, executable, resource hashes and updater have been checked on PC.
-Installation and launch of this new NSP on physical hardware remain unverified.
+The author has confirmed that 0.99.8 opens from HOME on an OLED Switch.
+Installing a later NSP update through the companion still needs console testing.
+RetroArch core launch currently requires the NRO version opened through the
+homebrew menu; core handoff is not yet supported by the standalone NSP.
 This is a development release, not a claim of complete Tinfoil or firmware parity.
 
 ## License and source requests
