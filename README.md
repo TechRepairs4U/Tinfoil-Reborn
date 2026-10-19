@@ -11,8 +11,8 @@ Download the latest **Tinfoil-Reborn** release ZIP from Releases. It contains:
 
 - `Tinfoil-Reborn.nsp`: a standalone HOME-menu application, with the executable,
   icon and UI assets embedded. It is not an NRO forwarder.
-- `switch/foil/foil.nro`: the homebrew-menu version and companion for installing
-  future NSP updates.
+- `switch/foil/foil.nro`: the homebrew-menu version. It can also install the
+  standalone application or recover a downloaded update.
 - License notices and the source-on-request offer.
 
 Copy the `switch` folder to the microSD root. Install `Tinfoil-Reborn.nsp` with
@@ -22,7 +22,18 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.9
+## Changes in 0.99.10
+
+- Checks for updates in the background at launch and announces a newer release.
+  Choose A to update, or B to continue using Reborn. Offline checks stay quiet.
+- After downloading and verifying an update, closes active resources, applies
+  the update and requests a restart. HOME updates use the existing transactional
+  installer with fixed app-update settings and preserve the old content.
+- NRO updates replace the executable after its RomFS and fonts have closed;
+  the previous executable is retained beside it as a `.previous` backup.
+- Interrupted HOME updates recover their transaction before the main UI starts.
+
+Also includes the 0.99.9 changes:
 
 - USB starts before theme and network initialization. Windows capacity queries
   no longer scan the Firmware export before displaying the device.
@@ -31,26 +42,34 @@ The NSP requires a CFW setup capable of running unsigned homebrew applications.
 - Idle MTP disconnects automatically before reboot; an active file transfer
   must finish first. USB is restored if the reboot request fails.
 
-The changes compile for Switch and pass PC regression checks. Discovery speed
-and the OLED Hekate reboot still need confirmation on a physical console.
+The changes compile for Switch and pass PC regression checks. The complete
+HOME self-update/restart, MTP discovery speed and OLED Hekate reboot still need
+confirmation on a physical console.
 
 ## App updates
 
-Choose **Options > Check for app updates**. New releases are fetched from this
+Reborn checks in the background at launch. You can also choose **Options >
+Check for app updates**. New releases are fetched from this
 repository over HTTPS and checked against their declared size and SHA-256.
 Updates are downloaded only after you choose Download.
 
-- NRO: updates the NRO you launched, preserving the old file as a `.previous`
-  backup. Close and reopen Reborn after completion.
-- HOME/NSP: downloads and verifies the new NSP. Close Reborn, launch the NRO
-  through the homebrew menu using a different title, and select **Options >
-  Install downloaded app update**. Confirm Install, then reopen the HOME app.
-  The currently running HOME title is deliberately protected from replacement.
+- NRO: closes resources, replaces the NRO you launched, and reloads it when the
+  homebrew loader supports this. Otherwise reopen it after the update completes.
+- HOME/NSP: installs the verified NSP in the application's current storage and
+  requests a restart. The app updater never replaces the running NCA files;
+  ordinary game installations still refuse to replace the running title.
+- Failed downloads or verification do not install anything. The verified NSP
+  remains available under **Options > Install downloaded app update** for retry.
+
+**Upgrading from 0.99.8 or 0.99.9:** install 0.99.10 once, because the old HOME
+updater only downloads its NSP. You can use Reborn's NRO through the homebrew
+menu or another homebrew installer. Subsequent releases use the new automatic
+apply flow after you accept the update.
 
 The first standalone NSP release is **0.99.8**. Its package structure, metadata
 digest, executable, resource hashes and updater have been checked on PC.
 The author has confirmed that 0.99.8 opens from HOME on an OLED Switch.
-Installing a later NSP update through the companion still needs console testing.
+The 0.99.10 HOME self-update/restart still needs console testing.
 RetroArch core launch currently requires the NRO version opened through the
 homebrew menu; core handoff is not yet supported by the standalone NSP.
 This is a development release, not a claim of complete Tinfoil or firmware parity.
