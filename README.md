@@ -22,7 +22,20 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.24
+## Changes in 0.99.25
+
+- Install All continues past named catalog files already in the install queue,
+  and reports how many requests were already queued.
+- Newly selected updates and DLC still queue when their base game is pending.
+- Replacing a queued update with a newer version preserves other selected
+  files attached to that job.
+
+Verified with original queue instructions, synthetic installer/queue tests
+and desktop controller/touch scenarios. Switch validation remains pending.
+Inspected bundles retain explicit error handling. Complete feature parity
+is still in progress.
+
+Also includes the 0.99.24 changes:
 
 - Install All can queue more than 128 titles. Saved queues support the larger
   list as well.
