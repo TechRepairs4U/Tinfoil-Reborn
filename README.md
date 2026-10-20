@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.56
+
+- NUT catalogs keep valid games when other search entries are malformed.
+- Missing JSON versions retain filename versions, region metadata survives,
+  and missing filename tags follow the audited original construction.
+- Highest numeric updates remain selected. Install Menu names hide trailing
+  region/package tags and retain ordinary bracketed subtitles.
+- External USB installation/HOME launch still needs physical verification.
+
 ## Changes in 0.99.55
 
 - NUT and secure NUT locations now preserve configured URL parameters when
