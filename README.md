@@ -22,6 +22,18 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.45
+
+- Saved shops now automatically scan the child catalogs listed in their JSON
+  directories array. Their games appear without manually opening each folder.
+- Directory source priority follows the declaring document; file priority
+  continues to follow the original shared-session rule.
+- Refresh removes retired child catalogs and persists the current combined
+  catalog for the next launch. Existing recursion limits and ROM core
+  restrictions remain in place.
+- Original directory dispatch and local refresh/cache tests passed. Physical
+  USB installation from 0.99.44 still needs console verification.
+
 ## Changes in 0.99.44
 
 - Install Menu -> Location now offers SD CARD, NAND and USB.
