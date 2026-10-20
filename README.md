@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.41
+
+- Keep your selection in New Games and Installed while the library rescans
+  after installation. Temporary empty or partial results no longer send it
+  back to the first game.
+- Finished shorter or empty lists still adjust selection to a valid position.
+- Original refresh instructions and desktop controller/touch tests passed.
+  Physical OLED validation and complete app parity remain outstanding.
+
 ## Changes in 0.99.40
 
 - Installed and related game lists refresh after the last install attempt,
