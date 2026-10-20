@@ -22,6 +22,17 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.35
+
+- File Browser Install All tries files in order and stops at the first successful
+  installation, matching original Tinfoil. Failed files can fall back to the next
+  file without waiting for a complete-folder preview.
+- ROM sections open the full Info view with matching metadata, cached media and
+  a Launch shortcut. Controller/touch Back restores Info after a cancelled
+  download or a failed launch.
+- Latest-update filtering and interrupted-install recovery remain in place.
+  Physical OLED validation and full ROM auxiliary-action parity remain pending.
+
 ## Changes in 0.99.34
 
 - Failed queue additions preserve existing selected files, DLC and update versions.
