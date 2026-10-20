@@ -22,7 +22,23 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.21
+## Changes in 0.99.22
+
+- In game catalogs and ROM lists, Plus opens Sort and Minus changes view.
+  The footer supports the same controls by touch. Sidebar Plus remains Search.
+- X Install All opens the Install Menu for the current filtered game list.
+  Confirm Install to queue those titles with the selected options. Only the
+  latest update is selected; partial queue failures report how many were added.
+- The left file pane shows the first title's base/update/DLC choices.
+- Fixes install recognition when shops send display names separately from
+  package filenames. ROM lists ignore X.
+
+Verified against original control/dispatch routines and desktop menu, touch,
+queue and theme tests. Switch validation, bulk source-selection edge cases
+and complete feature parity remain pending.
+
+Also includes the 0.99.21 changes:
+
 
 - In Installed, Plus opens Sort and Minus changes view, matching the original
   controller routing. The cycle is normal icons, small icons, then list.
