@@ -22,7 +22,16 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.12
+## Changes in 0.99.13
+
+- Adds large **B Cancel** and **A Exit** buttons inside the quit confirmation
+  box, with touch support. The footer keeps the same choices as well.
+- Uses opaque button backgrounds and ordinary text for A/B so the choices do
+  not depend on a controller-symbol font or on seeing the bottom of the screen.
+- The tester has confirmed that 0.99.12 cancels correctly and exits to HOME
+  without the closing error. This update changes the button presentation.
+
+Also includes the 0.99.12 changes:
 
 - Adds the quit confirmation: "Are you sure you want to quit?" Press B to
   cancel or A to exit; the footer buttons also support touch. Cancel keeps
@@ -31,9 +40,9 @@ The NSP requires a CFW setup capable of running unsigned homebrew applications.
   application exit instead of returning to the loader as an ordinary NRO.
   Successful RetroArch core handoffs keep the loader-return behavior.
 
-The 0.99.10 to 0.99.11 automatic HOME update, restart and launch are now confirmed
-by the tester. The closing error reported on 0.99.11 prompted this fix; closing
-0.99.12 without a system error still needs a physical Switch check.
+The 0.99.10 to 0.99.11 automatic HOME update, restart and launch are confirmed
+by the tester, as is closing 0.99.12 without the earlier system error.
+The new on-dialog buttons in 0.99.13 still need a physical Switch check.
 
 Also includes the 0.99.11 changes:
 
