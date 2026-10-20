@@ -22,6 +22,16 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.46
+
+- Nested JSON shop directories finish before the parent catalog is
+  published, matching original Tinfoil's loading and source-priority order.
+- Cancelling a manual scan also interrupts its active child directory.
+- Large scans retain their final error when success notifications fill
+  the event buffer.
+- Reference execution and local HTTP/cache/cancellation checks passed.
+  Physical USB installation and launch from HOME remain unverified.
+
 ## Changes in 0.99.45
 
 - Saved shops now automatically scan the child catalogs listed in their JSON
