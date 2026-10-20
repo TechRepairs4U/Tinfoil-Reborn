@@ -22,6 +22,13 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.34
+
+- Failed queue additions preserve existing selected files, DLC and update versions.
+- Saved jobs that cannot start remain available to retry, with an error in Console.
+- Fixed a JSON cleanup termination path under memory pressure. Physical OLED
+  stress behavior still needs console validation.
+
 ## Changes in 0.99.33
 
 - Homebrew entries can download an HTTP/HTTPS restart payload after a successful
