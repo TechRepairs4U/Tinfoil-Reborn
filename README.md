@@ -22,6 +22,32 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.52
+
+- Region tags in shop filenames now populate Region sorting and game lists.
+  Recognized regions stay consistent across versions and refreshes. Explicit
+  shop metadata takes precedence; English display names are preserved.
+- Existing 0.99.51 catalogs migrate without another shop download.
+  Cached artwork is retained.
+- USB remains available with compatible Nexus P3/T1 firmware. Physical USB
+  installation and launch from HOME still need verification.
+
+## Changes in 0.99.51
+
+- Filename title IDs and versions follow the original's token rules,
+  including parentheses, encoded names and repeated values.
+- Automatic catalog registration follows the original extension
+  capitalization rules. Manual File Browser installation remains available.
+- Older catalogs refresh once to replace previously inferred IDs and
+  versions. Cached artwork is retained.
+
+## Changes in 0.99.50
+
+- Linked HTTP shop files open in the original file order and loading stage.
+  Automatic TFL recognition and the processing limit follow the original.
+- Shop message files appear in Console. Refresh and cancellation preserve
+  the corresponding loading behavior.
+
 ## Changes in 0.99.49
 
 - Linked HTTP shop catalogs retain files from both loading responses and
