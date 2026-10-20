@@ -22,7 +22,19 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.23
+## Changes in 0.99.24
+
+- Install All can queue more than 128 titles. Saved queues support the larger
+  list as well.
+- Retains the existing queue storage-size budget, duplicate checks, recovery
+  protection and worker limits. An oversized submission preserves earlier jobs.
+- Keeps the requested queue clearing at every boot.
+
+Verified against the original queue-growth routines and with synthetic queue,
+production UI and installer tests. Physical large-queue testing and complete
+feature parity remain pending.
+
+Also includes the 0.99.23 changes:
 
 - Catalog Install All skips already registered extras when automatically
   expanding later titles in the batch.
