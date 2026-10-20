@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.33
+
+- Homebrew entries can download an HTTP/HTTPS restart payload after a successful
+  installation, with progress shown in the app.
+- Cancelling or failing that download keeps the installed application and
+  reports the restart error. Earlier cached payloads are never used as fallback.
+- Existing payload hardware limits apply. Physical reboot for this release
+  still needs console validation.
+
 ## Changes in 0.99.32
 
 - Catalog installs honor the shop's declared source priority when selecting
