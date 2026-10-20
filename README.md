@@ -22,7 +22,21 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.29
+## Changes in 0.99.30
+
+- Console and console.log retain failed source reasons, mirror attempts and
+  completion, even when an alternative source succeeds.
+- Attempt events identify their job and source number. They remain available
+  when the active job's Queue row is cleared.
+- Installation lifecycle messages are visible at every Log Level, matching the
+  original. Error, Warning and Debug remain the three selectable choices.
+- Diagnostic callback failures do not alter the installation result.
+
+Validated against bounded original logging instructions, synthetic packages,
+local HTTP mirrors, concurrent workers, queue handling and controller/touch
+regressions. Physical OLED validation and full parity remain pending.
+
+Also includes the 0.99.29 changes:
 
 - Installation retries available same-title, same-version sources when a source
   fails. The Install Menu still shows one checkbox per title/version.
