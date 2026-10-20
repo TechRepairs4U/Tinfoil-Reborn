@@ -22,7 +22,23 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.19
+## Changes in 0.99.20
+
+- Each game catalog and ROM system remembers its own view: normal icons,
+  small icons or list. Switching another section no longer changes it.
+- Restores those choices after restarting while retaining your previous
+  global preference for sections you have not changed.
+- Uses the active section's icon size for controller navigation, captions,
+  touch hit regions and scrolling, including custom themes.
+- Keeps fallback names below the placeholder symbol on small tiles when
+  artwork is unavailable.
+
+Verified against original view/configuration routines, local settings fixtures
+and production controller/touch flows. On-console validation and complete
+feature parity remain pending.
+
+Also includes the 0.99.19 changes:
+
 
 - Remembers sorting separately for Installed, New Games, New Updates, New DLC,
   XCI, Recommended, Incomplete and each ROM system.
