@@ -22,14 +22,27 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.26
+## Changes in 0.99.27
+
+- A/tap selects a Queue row without pausing an active or waiting job.
+- ZL/ZR page Queue instead of switching sections, with matching footer touch buttons.
+- Active Status cells show progress bars; speed uses decimal MB/s.
+- Package names use the existing language-aware display cleanup; finished installs
+  show Complete. Ordinary transferred filenames keep their names.
+- Paused jobs and interrupted installs retain explicit A Resume/Recover actions.
+  Ordinary Queue rows no longer expose an extra R Details action.
+
+Validated against bounded original Queue instructions, synthetic jobs and desktop
+controller/touch scenarios. Physical Switch rendering and full parity remain pending.
+
+Also includes the 0.99.26 changes:
 
 - Queue uses X Delete for the selected job and Y Delete All for the list.
 - Delete All removes waiting work and dismisses active rows. Operations already
   running continue in the background; a message explains this behavior.
 - Completed download files are retained. Recovery errors stay visible, and
   active work still blocks an app update even after its row is dismissed.
-- R opens job details; A retains Reborn's pause/resume control. ZL/ZR page Queue.
+- Queue controls were further aligned in 0.99.27 as described above.
 
 Verified with original Queue instruction checks, a controlled local download,
 synthetic installer/queue tests and desktop input scenarios. Physical Switch
