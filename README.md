@@ -22,6 +22,16 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.42
+
+- Game lists scroll one row at a time at the selection edge, matching the
+  original in normal icons, small icons and list view.
+- Moving back within the visible area keeps your position.
+- Touch-scrolled positions survive background library refreshes after
+  installation, while shorter finished lists still bound the scroll position.
+- Original scrolling code and desktop controller/touch regressions passed.
+  Physical OLED validation and complete app parity remain outstanding.
+
 ## Changes in 0.99.41
 
 - Keep your selection in New Games and Installed while the library rescans
