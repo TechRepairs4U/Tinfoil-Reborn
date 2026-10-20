@@ -22,6 +22,14 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.36
+
+- ROM Info's Cheats shortcut opens the normal list and matches records to the
+  ROM's own metadata ID. Controller/touch selections persist across restart.
+- Disabling the last cheat now correctly saves and displays NO, even when the
+  selection file becomes empty.
+- Physical OLED validation and emulator cheat effectiveness remain unverified.
+
 ## Changes in 0.99.35
 
 - File Browser Install All tries files in order and stops at the first successful
