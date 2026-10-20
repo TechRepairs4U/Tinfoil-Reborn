@@ -22,6 +22,14 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.37
+
+- Backup Saves from Info returns to the same title and description position.
+- The shortcut uses the exact selected record and all available console users.
+  Results are recorded in Console.
+- Local archive and controller/touch checks passed; physical OLED backup
+  validation remains pending.
+
 ## Changes in 0.99.36
 
 - ROM Info's Cheats shortcut opens the normal list and matches records to the
