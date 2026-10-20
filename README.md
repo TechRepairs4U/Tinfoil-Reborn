@@ -22,7 +22,19 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.22
+## Changes in 0.99.23
+
+- Catalog Install All skips already registered extras when automatically
+  expanding later titles in the batch.
+- Explicitly selected updates still queue, even when an older version is
+  registered. The first title's reviewed file checkboxes remain unchanged.
+- Retains latest-version selection and skips duplicate title/version requests.
+
+Verified against the original related-title callback with synthetic inputs
+and desktop menu/queue regressions. Physical Switch validation and complete
+feature parity remain pending.
+
+Also includes the 0.99.22 changes:
 
 - In game catalogs and ROM lists, Plus opens Sort and Minus changes view.
   The footer supports the same controls by touch. Sidebar Plus remains Search.
