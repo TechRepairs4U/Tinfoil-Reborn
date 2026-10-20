@@ -22,7 +22,19 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.13
+## Changes in 0.99.14
+
+- Makes Released, Rank and Region sorting work in RetroArch ROM sections.
+- Retains rank metadata provided by a server and follows the original region
+  ordering and size comparison.
+- Prepares display-name sort keys once per list, reducing repeated work when
+  sorting large ROM catalogs.
+
+Verified with a local test server, the actual controller/touch menu, original
+comparison routines and native Switch compilation. Physical ROM/core testing
+and remaining parity work, including Last Used sorting, are still pending.
+
+Also includes the 0.99.13 changes:
 
 - Adds large **B Cancel** and **A Exit** buttons inside the quit confirmation
   box, with touch support. The footer keeps the same choices as well.
