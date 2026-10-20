@@ -22,13 +22,29 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.16
+## Changes in 0.99.17
+
+- Matches game-list size labels to the original decimal units and precision,
+  including compact labels such as `14 GB` and `0.8 MB`. A zero recorded size
+  displays `0.0 B`.
+- Centers Region and right-aligns Version/Size within consistent cell padding.
+- Uses the base game's name and region for updates; DLC rows show
+  `base game - DLC name` and the base game's region. English-name preferences
+  still apply. The Install Menu keeps its simplified names.
+- Matches ordinary content and system-version title text, including `23.0.1`,
+  and uses the original common Type/Version fields in ROM lists.
+
+Verified against original formatter routines, local metadata and a loopback
+shop through the production renderer, plus native compilation. Physical
+verification and complete feature parity remain pending.
+
+Also includes the 0.99.16 changes:
 
 - Matches Installed's list columns to the original: Name, Type, Version,
   Region, Size and Released. The name column expands when the sidebar closes.
 - Uses the same column spacing and row rendering across Installed, shop and
   ROM lists. Installed uses its local content version and available title
-  metadata; unknown sizes remain blank placeholders.
+  metadata. Version 0.99.17 updates these size labels as described above.
 
 Verified against both original column constructors, desktop UI checks and
 native compilation. Physical Switch verification of this layout is pending.
