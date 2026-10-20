@@ -22,7 +22,20 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.11
+## Changes in 0.99.12
+
+- Adds the quit confirmation: "Are you sure you want to quit?" Press B to
+  cancel or A to exit; the footer buttons also support touch. Cancel keeps
+  your current screen and selection. Active installations retain their exit guard.
+- Fixes the embedded HOME application's shutdown path to use libnx's orderly
+  application exit instead of returning to the loader as an ordinary NRO.
+  Successful RetroArch core handoffs keep the loader-return behavior.
+
+The 0.99.10 to 0.99.11 automatic HOME update, restart and launch are now confirmed
+by the tester. The closing error reported on 0.99.11 prompted this fix; closing
+0.99.12 without a system error still needs a physical Switch check.
+
+Also includes the 0.99.11 changes:
 
 - Adds an embedded loader to the standalone NSP for launching installed
   RetroArch cores. Reborn stays inside the NSP; an SD copy of Reborn is not
@@ -33,9 +46,8 @@ The NSP requires a CFW setup capable of running unsigned homebrew applications.
   running through its embedded loader. The separate NRO keeps its normal
   homebrew-menu behavior.
 
-The new HOME launch path and RetroArch core launch/return have passed host
-boundary tests and native compilation, but still require a physical Switch
-test. The prior 0.99.10 release remains available under Releases.
+The RetroArch core launch/return has passed host boundary tests and native
+compilation, but still requires a physical Switch test.
 
 Also includes the 0.99.10 updater changes:
 
@@ -57,9 +69,8 @@ Also includes the 0.99.9 changes:
 - Idle MTP disconnects automatically before reboot; an active file transfer
   must finish first. USB is restored if the reboot request fails.
 
-The changes compile for Switch and pass PC regression checks. The complete
-HOME self-update/restart, MTP discovery speed and OLED Hekate reboot still need
-confirmation on a physical console.
+The changes compile for Switch and pass PC regression checks. MTP discovery
+speed and OLED Hekate reboot still need confirmation on a physical console.
 
 ## App updates
 
@@ -84,7 +95,7 @@ apply flow after you accept the update.
 The first standalone NSP release is **0.99.8**. Its package structure, metadata
 digest, executable, resource hashes and updater have been checked on PC.
 The author has confirmed that 0.99.8 opens from HOME on an OLED Switch.
-The 0.99.10 HOME self-update/restart still needs console testing.
+The tester has confirmed the 0.99.10 to 0.99.11 HOME self-update and restart.
 The standalone RetroArch loader added in 0.99.11 still requires console
 verification; the NRO version continues to use the homebrew menu's loader.
 This is a development release, not a claim of complete Tinfoil or firmware parity.
