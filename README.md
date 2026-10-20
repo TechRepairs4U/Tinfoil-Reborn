@@ -22,7 +22,21 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.25
+## Changes in 0.99.26
+
+- Queue uses X Delete for the selected job and Y Delete All for the list.
+- Delete All removes waiting work and dismisses active rows. Operations already
+  running continue in the background; a message explains this behavior.
+- Completed download files are retained. Recovery errors stay visible, and
+  active work still blocks an app update even after its row is dismissed.
+- R opens job details; A retains Reborn's pause/resume control. ZL/ZR page Queue.
+
+Verified with original Queue instruction checks, a controlled local download,
+synthetic installer/queue tests and desktop input scenarios. Physical Switch
+validation and complete control/feature parity remain pending.
+
+Also includes the 0.99.25 changes:
+
 
 - Install All continues past named catalog files already in the install queue,
   and reports how many requests were already queued.
