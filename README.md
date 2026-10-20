@@ -22,7 +22,18 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.15
+## Changes in 0.99.16
+
+- Matches Installed's list columns to the original: Name, Type, Version,
+  Region, Size and Released. The name column expands when the sidebar closes.
+- Uses the same column spacing and row rendering across Installed, shop and
+  ROM lists. Installed uses its local content version and available title
+  metadata; unknown sizes remain blank placeholders.
+
+Verified against both original column constructors, desktop UI checks and
+native compilation. Physical Switch verification of this layout is pending.
+
+Also includes the 0.99.15 changes:
 
 - Adds Last Used sorting from Switch application records, including Installed.
 - Adds sorting to Installed and retains region, release date, rank and size
@@ -73,7 +84,7 @@ Also includes the 0.99.12 changes:
 
 The 0.99.10 to 0.99.11 automatic HOME update, restart and launch are confirmed
 by the tester, as is closing 0.99.12 without the earlier system error.
-The new on-dialog buttons in 0.99.13 still need a physical Switch check.
+Both on-dialog buttons from 0.99.13 are now confirmed visible on the Switch.
 
 Also includes the 0.99.11 changes:
 
