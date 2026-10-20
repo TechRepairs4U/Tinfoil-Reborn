@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.55
+
+- NUT and secure NUT locations now preserve configured URL parameters when
+  saving, browsing, fetching icons and downloading files.
+- Cached catalogs retain those parameters across restarts, with separate
+  cache entries for different source addresses. Cached artwork is reused.
+- Existing layout, controls and USB behavior are retained. External USB
+  installation and HOME launch still need physical verification.
+
 ## Changes in 0.99.54
 
 - NUT and secure NUT downloads retain the encoded filename after the title ID,
