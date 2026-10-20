@@ -22,6 +22,18 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.44
+
+- Install Menu -> Location now offers SD CARD, NAND and USB.
+- USB requires compatible Nexus P3/T1 firmware and a connected drive.
+  Reborn reads back written content before registration and stops if the
+  drive disconnects. It never falls back to SD when USB is selected.
+- SD installation explicitly targets physical SD when Nexus is running.
+- This release updates the app only; it does not install USB firmware.
+  A small metadata scratch file still needs free space on SD.
+- Desktop protocol and installer tests passed. Physical USB installation
+  and HOME launch still require testing on the Switch.
+
 ## Changes in 0.99.43
 
 - Shop source priority now carries forward between JSON shop responses,
