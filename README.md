@@ -22,7 +22,20 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.30
+## Changes in 0.99.31
+
+- Catalog installs use the original source priority and prefer NSZ/XCZ within
+  each priority group. Equal-ranked sources retain their catalog order.
+- Selecting a particular file in File Browser keeps that source; a failure
+  does not silently substitute another catalog file.
+- Refreshed catalogs and catalog Install All use the same ordering. The
+  latest-update-only rule, layout and controls remain in effect.
+
+Validated against bounded original source-ordering instructions, synthetic
+package transactions and desktop controller/touch paths. Physical OLED source
+fallback and full parity remain pending.
+
+Also includes the 0.99.30 changes:
 
 - Console and console.log retain failed source reasons, mirror attempts and
   completion, even when an alternative source succeeds.
