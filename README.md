@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.48
+
+- Linked TFL catalogs finish loading before Reborn moves to the next
+  source, correcting download-source priority across shops.
+- Parent file priority remains fixed during linked loads. Cancelling a
+  manual scan also interrupts its active linked download.
+- USB remains available with compatible Nexus firmware. Physical USB
+  installation and launch from HOME still need verification.
+
 ## Changes in 0.99.47
 
 - Shop scans follow the server's directory order, even when it differs
