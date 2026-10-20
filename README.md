@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.54
+
+- NUT and secure NUT downloads retain the encoded filename after the title ID,
+  matching the audited original URL construction.
+- Saved ID-only links remain usable. Bounded reads, verified resume, cached
+  artwork and the current controller/touch controls are retained.
+- USB installation/HOME launch still needs physical verification with
+  compatible Nexus P3/T1 firmware.
+
 ## Changes in 0.99.53
 
 - Fixes HTTP/HTTPS shop relative file addresses that could cause a 404.
