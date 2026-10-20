@@ -22,7 +22,22 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.17
+## Changes in 0.99.18
+
+- Preserves the original order of tied games when changing sort fields, and
+  matches the original reversal of tied rows when sorting descending.
+- Keeps prepared ordering when revisiting a section or rendering another
+  frame. Installed reuses its prepared list instead of sorting every frame.
+- Matches missing-rank handling while retaining an explicit server rank of
+  zero. Existing catalog caches still load without a forced redownload.
+- Keeps unavailable Incomplete rows attached to the correct titles when the
+  sort direction changes. ROM systems retain their own prepared row order.
+
+Verified against original sort routines, local catalog/cache fixtures,
+production controller/touch flows and native compilation. Physical sorting
+validation and complete feature parity remain pending.
+
+Also includes the 0.99.17 changes:
 
 - Matches game-list size labels to the original decimal units and precision,
   including compact labels such as `14 GB` and `0.8 MB`. A zero recorded size
