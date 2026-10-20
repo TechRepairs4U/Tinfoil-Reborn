@@ -22,7 +22,23 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.28
+## Changes in 0.99.29
+
+- Installation retries available same-title, same-version sources when a source
+  fails. The Install Menu still shows one checkbox per title/version.
+- Catalog refresh replaces outdated alternatives. A failed latest update never
+  falls back to an older update.
+- Checked bundle titles stay selected across retries. Titles already committed
+  by an earlier attempt are not installed twice, even with Reinstall enabled.
+  Shared content is verified and reused across attempts.
+- Cancellation and pending recovery stop retries. Each source uses its own
+  server authentication, and progress explains when another source is tried.
+
+Validated against bounded original source-loop instructions, synthetic package
+transactions, queue persistence, UI regressions and separately authenticated
+local HTTP servers. Physical Switch fallback and full parity remain pending.
+
+Also includes the 0.99.28 changes:
 
 - Background file-transfer outcomes reach Console even after their Queue rows
   have been cleared. Finished downloads and failures are reported once.
@@ -33,8 +49,8 @@ The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
 Validated with bounded original worker-lifecycle instructions, controlled HTTP
 responses, real transfer workers, Console/disk logging and Queue UI regressions.
-Physical Switch validation and full parity remain pending. General alternate-source
-retries for title installation remain unfinished.
+Physical Switch validation and full parity remain pending. Alternate-source
+installation retries were added in 0.99.29 as described above.
 
 Also includes the 0.99.27 changes:
 
