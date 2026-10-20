@@ -22,7 +22,19 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.20
+## Changes in 0.99.21
+
+- In Installed, Plus opens Sort and Minus changes view, matching the original
+  controller routing. The cycle is normal icons, small icons, then list.
+- Remembers Installed's view independently after restarting.
+- Shows the corresponding footer labels with touch controls. Sidebar Plus
+  still opens Search; the other Installed actions remain available.
+
+Verified against original input routines and desktop controller/touch/restart
+flows in Dark, Light and Atmosphere. Physical Switch validation and complete
+feature parity remain pending.
+
+Also includes the 0.99.20 changes:
 
 - Each game catalog and ROM system remembers its own view: normal icons,
   small icons or list. Switching another section no longer changes it.
