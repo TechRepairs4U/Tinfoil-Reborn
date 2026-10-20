@@ -22,7 +22,20 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.18
+## Changes in 0.99.19
+
+- Remembers sorting separately for Installed, New Games, New Updates, New DLC,
+  XCI, Recommended, Incomplete and each ROM system.
+- Restores each section's field and direction after restarting. Changing one
+  section no longer changes another section or File Browser's direction.
+- Preserves your existing order for sections you have not changed yet.
+- Reuses prepared lists when switching between sections with different sorts.
+
+Verified against the original per-view configuration lookup, settings migration,
+local catalogs and production controller/touch flows across restarts. Physical
+sorting validation and complete feature parity remain pending.
+
+Also includes the 0.99.18 changes:
 
 - Preserves the original order of tied games when changing sort fields, and
   matches the original reversal of tied rows when sorting descending.
