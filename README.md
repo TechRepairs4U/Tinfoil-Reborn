@@ -22,6 +22,16 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.53
+
+- Fixes HTTP/HTTPS shop relative file addresses that could cause a 404.
+  File and child-folder links append to the complete shop path, matching
+  the audited original behavior.
+- Query and display-fragment links follow the same rules. Artwork link
+  resolution and authentication protections are retained.
+- Existing catalogs and artwork remain available during startup scans.
+  USB installation/HOME launch still needs physical verification.
+
 ## Changes in 0.99.52
 
 - Region tags in shop filenames now populate Region sorting and game lists.
