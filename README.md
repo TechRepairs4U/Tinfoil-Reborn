@@ -22,6 +22,16 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.43
+
+- Shop source priority now carries forward between JSON shop responses,
+  matching the original's session behavior. Missing or zero priority keeps
+  the last nonzero value; restarting the app resets that preference.
+- Refreshes, cached responses and newly opened indexes apply the same rule.
+  Latest numeric update versions still take precedence.
+- Original parser/file handoff and local shop/cache/installer checks passed.
+  Physical OLED validation and complete app parity remain outstanding.
+
 ## Changes in 0.99.42
 
 - Game lists scroll one row at a time at the selection edge, matching the
