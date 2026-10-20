@@ -22,6 +22,17 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.49
+
+- Linked HTTP shop catalogs retain files from both loading responses and
+  apply the final source priority to the combined files.
+- A failed follow-up keeps the first response's files. Separate validators
+  preserve the correct cached body during conditional refresh.
+- Saved catalogs omit duplicate file paths. Cancelling a manual scan also
+  stops its follow-up request.
+- USB remains available with compatible Nexus P3/T1 firmware. Physical USB
+  installation and launch from HOME still need verification.
+
 ## Changes in 0.99.48
 
 - Linked TFL catalogs finish loading before Reborn moves to the next
