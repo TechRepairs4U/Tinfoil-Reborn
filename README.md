@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.57
+
+- Release dates stored as text now work consistently in shop catalogs, local
+  title databases and selected-game details.
+- Optional date values no longer reject a shop title database. Date parsing
+  and display follow the audited original behavior.
+- Released sorting and cached dates are verified across reloads.
+- Physical external USB installation and HOME launch remain unverified.
+
 ## Changes in 0.99.56
 
 - NUT catalogs keep valid games when other search entries are malformed.
