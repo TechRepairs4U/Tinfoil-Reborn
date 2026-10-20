@@ -22,7 +22,21 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.27
+## Changes in 0.99.28
+
+- Background file-transfer outcomes reach Console even after their Queue rows
+  have been cleared. Finished downloads and failures are reported once.
+- A failed retry reports its new outcome. Queue-file save errors are reported
+  without repeating an unchanged error, and completed files are retained.
+- Pause and cancellation use Debug logging; failures remain visible at Error.
+  The same filtering applies to Console and the saved log.
+
+Validated with bounded original worker-lifecycle instructions, controlled HTTP
+responses, real transfer workers, Console/disk logging and Queue UI regressions.
+Physical Switch validation and full parity remain pending. General alternate-source
+retries for title installation remain unfinished.
+
+Also includes the 0.99.27 changes:
 
 - A/tap selects a Queue row without pausing an active or waiting job.
 - ZL/ZR page Queue instead of switching sections, with matching footer touch buttons.
