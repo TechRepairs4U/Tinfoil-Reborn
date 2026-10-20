@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.39
+
+- Submitting an install closes its options menu. The first job opens progress;
+  further starts within one minute do not repeatedly interrupt browsing.
+- Back hides progress while installation continues. Completion closes only
+  that job's popup, preserving another screen opened afterward.
+- Original callback, production queue and controller/touch checks passed.
+  Physical OLED behavior and complete app parity remain unverified.
+
 ## Changes in 0.99.38
 
 - ROM Info's Install Menu now shows its metadata row and original columns.
