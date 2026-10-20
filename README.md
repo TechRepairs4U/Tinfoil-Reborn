@@ -22,7 +22,24 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
-## Changes in 0.99.14
+## Changes in 0.99.15
+
+- Adds Last Used sorting from Switch application records, including Installed.
+- Adds sorting to Installed and retains region, release date, rank and size
+  metadata for its available columns.
+- Uses the original eight-field sort selector. Selecting the current field
+  again reverses its order; selecting a different field starts ascending.
+  All choices fit above the footer and accept controller or touch input.
+- Timestamp changes refresh sorted catalogs; normal section switches reuse
+  the prepared lists.
+- Matches the original Type and Region ordering, including its Version-column
+  comparison. Latest-update installation still selects the highest version.
+
+Verified using synthetic execution of the original routines, a local shop,
+the production controller/touch UI and native compilation. Physical Switch
+verification and full feature parity remain pending.
+
+Also includes the 0.99.14 changes:
 
 - Makes Released, Rank and Region sorting work in RetroArch ROM sections.
 - Retains rank metadata provided by a server and follows the original region
@@ -32,7 +49,7 @@ The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
 Verified with a local test server, the actual controller/touch menu, original
 comparison routines and native Switch compilation. Physical ROM/core testing
-and remaining parity work, including Last Used sorting, are still pending.
+and remaining parity work are still pending.
 
 Also includes the 0.99.13 changes:
 
@@ -42,6 +59,8 @@ Also includes the 0.99.13 changes:
   not depend on a controller-symbol font or on seeing the bottom of the screen.
 - The tester has confirmed that 0.99.12 cancels correctly and exits to HOME
   without the closing error. This update changes the button presentation.
+- The tester has also confirmed that both on-dialog buttons are visible on
+  the Switch after installing the visibility fix.
 
 Also includes the 0.99.12 changes:
 
