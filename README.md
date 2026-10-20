@@ -22,6 +22,15 @@ Both versions share settings, shops and cached artwork in `/switch/foil`.
 No shops, accounts, games, console credentials or firmware are supplied.
 The NSP requires a CFW setup capable of running unsigned homebrew applications.
 
+## Changes in 0.99.47
+
+- Shop scans follow the server's directory order, even when it differs
+  from alphabetical order. This fixes source priority in nested shops.
+- File Browser rows remain alphabetically sorted. Conditional refreshes
+  preserve the original scan order.
+- USB remains an Install Menu destination with compatible Nexus firmware.
+  Physical USB installation and launch from HOME still need verification.
+
 ## Changes in 0.99.46
 
 - Nested JSON shop directories finish before the parent catalog is
